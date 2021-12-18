@@ -43,6 +43,7 @@
     <!-- Issue workaround for React v16. -->
     <script>
       // See https://github.com/facebook/react/issues/20829#issuecomment-802088260
+      if (typeof crossOriginIsolated === 'undefined') crossOriginIsolated = false;
       if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
     </script>
   </body>
